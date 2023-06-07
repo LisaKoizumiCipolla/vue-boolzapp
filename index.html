@@ -23,26 +23,75 @@
                         <div class="contact-me d-flex align-items-center justify-content-between">
                             <div>
                                 <img class="small-avatar" src="./img/avatar_io.jpg" alt="">
-                                <span>Sofia</span>
+                                <span class="black-text ps-2">Sofia</span>
                             </div>
                             <div>
-
+                                <i class="fa-solid fa-circle-notch fa-lg"></i>
+                                <i class="fa-solid fa-message fa-lg"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                             </div>
                         </div>
-                        <div class="contact-notification"></div>
-                        <div class="contact-searchbar"></div>
+                        <div class="contact-notification ps-3 d-flex align-items-center">
+                            <div class="circle">
+                                <i class="ms-2 fa-solid fa-bell-slash fa-lg"></i>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ps-2">
+                                <span class="black-text">Ricevi notifiche di nuovi messaggi</span>
+                                <span class="text-decoration-underline last-access">Attiva notifiche desktop</span>
+                            </div>
+                        </div>
+                        <div class="contact-searchbar d-flex align-items-center justify-content-center">
+                            <div class="input-group mx-2">
+                                <button class="btn text-center" id="basic-addon1">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>                              
+                        </div>
                     </div>
                     <div class="contacts-list-section">
                         <ul class="contact-list">
-                            <li></li>
+                            <li v-for="(element, index) in contacts" class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <img class="big-avatar" :src="element.avatar" alt="">
+                                    <div class="d-flex flex-column ps-2">
+                                        <span class="black-text">
+                                            {{element.name}}
+                                        </span>
+                                        <span class="last-message">
+                                            Ultimo messaggio inviato
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="last-message">
+                                    12:00
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="chat">
-                    <div class="chat-contact"></div>
+                    <div class="chat-contact d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img class="small-avatar" src="./img/avatar_1.jpg" alt="">
+                            <div class="d-flex flex-column ps-2">
+                                <span class="black-text">Michele</span>
+                                <span class="last-access">Ultimo accesso oggi alle 12:00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            <i class="fa-solid fa-paperclip fa-lg"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                        </div>
+                    </div>
                     <div class="chat-screen">
                     </div>
-                    <div class="chat-message"></div>
+                    <div class="chat-message d-flex align-items-center justify-content-between p-3">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" id="input-text" aria-describedby="emailHelp">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
                 </div>
             </div>
         </main>

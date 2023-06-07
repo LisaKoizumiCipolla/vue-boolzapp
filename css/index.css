@@ -28,47 +28,101 @@ main{
     height: 100%;
 }
 
-.contacts-header{
-    height: 20%;
-}
-
 .small-avatar{
-    height: 50px;
-    width: 50%;
+    height: 45px;
+    width: 45px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.big-avatar{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.black-text{
+    color: black;
+    font-size: .9rem;
+}
+
+.last-access{
+    font-size: .75rem;
+}
+
+.last-message{
+    color: #cacfdc;
+    font-size: .7rem;
 }
 
 .contact-me, .chat-contact{
     height: 60px;
     background-color: #eaeaea;
     padding-left: 10px;
-    padding-right: 30px;
+    padding-right: 20px;
+    color: #b1b1b1;
+}
+
+i{
+    padding-left: 20px;
+}
+
+.btn{
+    background-color: white;
+    border: 1px solid #ced4da;
+    text-align: center;
+}
+
+.btn .fa-magnifying-glass{
+    padding: 0px 15px;
 }
 
 .contact-notification{
     height: 65px;
     background-color: #8edafc;
+    color: #5d8ca2;
+}
+
+.circle{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+    position: relative;
+}
+
+.circle .fa-bell-slash{
+    top: 50%;
+    left: 50%;
+    transform: translate(-88%, -50%);
+    position: absolute;
+    
 }
 
 .contact-searchbar{
     background-color: #fafafa;
-    height: calc(100% - 125px);
+    height: 50px;
 }
 
 .contacts-list-section{
-    height: 80%;
+    height: calc(100% - 175px);
     overflow: hidden;
     overflow-y: auto;
     background-color: white;
 }
 
 ul{
-    list-style-type: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 li{
     height: 80px;
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 li:hover{
@@ -90,9 +144,16 @@ li:hover{
     height: calc(100% - 125px);
     background-image: url("../img/mine.jpg");
     background-repeat: repeat;
+    padding: 50px 70px;
 }
 
 .chat-message{
     height: 65px;
     background-color: #eaeaea;
+    color: #5d6c73;
+}
+
+.fa-face-smile{
+    padding-left: 0;
+    padding-right: 15px;
 }
