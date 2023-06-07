@@ -3,3 +3,96 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #dadbd4;
+}
+
+main{
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.main-block{
+    width: 100%;
+    height: 900px;
+}
+
+.contacts{
+    width: 35%;
+    height: 100%;
+}
+
+.contacts-header{
+    height: 20%;
+}
+
+.small-avatar{
+    height: 50px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact-me, .chat-contact{
+    height: 60px;
+    background-color: #eaeaea;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.contact-notification{
+    height: 65px;
+    background-color: #8edafc;
+}
+
+.contact-searchbar{
+    background-color: #fafafa;
+    height: calc(100% - 125px);
+}
+
+.contacts-list-section{
+    height: 80%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    height: 80px;
+}
+
+li:hover{
+    background-color: #e9ebeb;
+}
+
+.chat{
+    width: 65%;
+    height: 100%;
+}
+
+.chat-contact{
+    border-left: 1px solid #e1e1e1;
+}
+
+.chat-screen{
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc(100% - 125px);
+    background-image: url("../img/mine.jpg");
+    background-repeat: repeat;
+}
+
+.chat-message{
+    height: 65px;
+    background-color: #eaeaea;
+}

@@ -106,7 +106,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: './img/avatar_5.png',
+                    avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
