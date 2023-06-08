@@ -89,6 +89,7 @@
                     </div>
 
                     <div class="chat-screen d-flex flex-column">
+                        <!-- 
                         <div class="message my-message">
                             <p class="message-text">Hai portato a spasso il cane?</p>
                             <span class="timestamp ">15:30</span>
@@ -100,6 +101,15 @@
                         <div class="message your-message">
                             <p class="message-text">Tutto fatto!</p>
                             <span class="timestamp ">16:15</span>
+                        </div> 
+                        -->
+                        <div class="message" v-for="(element, index) in contacts" @click="selectChatElement()">
+                            <p class="message-text" v-if="element.messages.status === 'sent ' ? :class='{your-message: element.element.messages.message}' : :class='{my-message: element.element.messages.message}'">
+                                {{element.messages.message}}
+                            </p>
+                            <span class="timestamp">
+                                {{element.messages.date}}
+                            </span>
                         </div>
                     </div>
 

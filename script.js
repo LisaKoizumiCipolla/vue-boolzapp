@@ -166,11 +166,15 @@ createApp({
                     ],
                 }
             ],
+
+            activeIndex : 0,
             
         }
     },
     methods:{
-        
+        selectChatElement(){
+            this.activeIndex = this.contacts[index];
+        }
     },
 
 
