@@ -173,11 +173,39 @@ createApp({
     },
     methods:{
         chooseUser(index){
-            this.activeIndex === index;
+            this.activeIndex = index;
             console.log(index);
-        }
+        },
+
+        addNewMessage(){
+            if(this.newMessage !== ""){
+                this.contacts[this.activeIndex].messages.push({
+                    message : this.newMessage, 
+                    status : "sent",
+                });
+                this.newMessage = "";
+                setTimeout( () => {
+                    this.contacts[this.activeIndex].messages.push({
+                        message : "Ok", 
+                        status : "received",
+                    });
+                }, 1000);
+
+            }
+        },
+
+        /*filterContacts(){
+            if(this.searchContact !== ""){
+                this.contacts = this.contacts.filter( contact => contact.name.includes(this.searchContact));
+            } 
+        }, */
+
+
     },
 
+    computed : {
+
+    }
 
 
 }).mount("#vue");
