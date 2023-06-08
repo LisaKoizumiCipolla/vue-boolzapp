@@ -77,9 +77,9 @@
 
                     <div class="chat-contact d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
-                            <img class="small-avatar" src="./img/avatar_1.jpg" alt="">
+                            <img class="small-avatar" :src="contacts[activeIndex].avatar" alt="">
                             <div class="d-flex flex-column ps-2">
-                                <span class="black-text">Michele</span>
+                                <span class="black-text">{{contacts[activeIndex].name}}</span>
                                 <span class="last-access">Ultimo accesso oggi alle 12:00</span>
                             </div>
                         </div>

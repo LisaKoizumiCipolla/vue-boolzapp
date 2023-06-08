@@ -168,15 +168,17 @@ createApp({
             ],
 
             activeIndex : 0,
-            
+            filter: '',
         }
     },
     methods:{
+        //get the chat screen clicking on contact list
         chooseUser(index){
             this.activeIndex = index;
             console.log(index);
         },
 
+        //write on chat
         addNewMessage(){
             if(this.newMessage !== ""){
                 this.contacts[this.activeIndex].messages.push({
@@ -193,19 +195,6 @@ createApp({
 
             }
         },
-
-        /*filterContacts(){
-            if(this.searchContact !== ""){
-                this.contacts = this.contacts.filter( contact => contact.name.includes(this.searchContact));
-            } 
-        }, */
-
-
     },
-
-    computed : {
-
-    }
-
 
 }).mount("#vue");
