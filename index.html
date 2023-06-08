@@ -51,7 +51,7 @@
                     </div>
                     <div class="contacts-list-section">
                         <ul class="contact-list">
-                            <li v-for="(element, index) in contacts" class="d-flex justify-content-between">
+                            <li v-for="(element, index) in contacts" @click="chooseUser(index)" class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <img class="big-avatar" :src="element.avatar" alt="">
                                     <div class="d-flex flex-column ps-2">
@@ -103,12 +103,13 @@
                             <span class="timestamp ">16:15</span>
                         </div> 
                         -->
-                        <div class="message" v-for="(element, index) in contacts" @click="selectChatElement()">
-                            <p class="message-text" v-if="element.messages.status === 'sent ' ? :class='{your-message: element.element.messages.message}' : :class='{my-message: element.element.messages.message}'">
-                                {{element.messages.message}}
+                        <div class="message" :class="element.status === 'received' ? 'your-message' : 'my-message' " 
+                        v-for="(element, index) in contacts[activeIndex].messages" >
+                            <p class="message-text" >
+                                {{element.message}}
                             </p>
                             <span class="timestamp">
-                                {{element.messages.date}}
+                                {{element.date}}
                             </span>
                         </div>
                     </div>

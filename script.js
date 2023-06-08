@@ -172,8 +172,9 @@ createApp({
         }
     },
     methods:{
-        selectChatElement(){
-            this.activeIndex = this.contacts[index];
+        chooseUser(index){
+            this.activeIndex === index;
+            console.log(index);
         }
     },
 
