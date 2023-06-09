@@ -168,7 +168,7 @@ createApp({
             ],
 
             activeIndex : 0,
-            filter: '',
+            filter: "",
         }
     },
     methods:{
@@ -194,6 +194,18 @@ createApp({
                 }, 1000);
 
             }
+        },
+
+        filterContacts(){
+            this.filter === this.searchContact;
+        }
+    },
+
+    computed:{
+        filteredContacts(){
+            return this.contacts.filter (contacts => {
+                return contacts.name.toLowerCase().includes(this.filter)
+            }); 
         },
     },
 
