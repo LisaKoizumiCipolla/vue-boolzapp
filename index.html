@@ -92,6 +92,17 @@
                     <div class="chat-screen d-flex flex-column">
                         <div class="message" :class="element.status === 'received' ? 'your-message' : 'my-message' " 
                         v-for="(element, index) in contacts[activeIndex].messages" >
+                            
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-angle-down chat-menu"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" @click="removeChatElement(index)" href="#">Message info</a></li>
+                                <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                </ul>
+                            </div>
+                                
                             <p class="message-text" >
                                 {{element.message}}
                             </p>

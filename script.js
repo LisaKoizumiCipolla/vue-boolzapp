@@ -198,6 +198,10 @@ createApp({
 
         filterContacts(){
             this.filter = this.searchContact;
+        },
+
+        removeChatElement(index){
+            this.contacts[index].messages.splice(index, 1);
         }
     },
 

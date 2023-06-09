@@ -173,6 +173,24 @@ li:hover{
     width: 40%;
 }
 
+.button{
+    background-color: none;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: #8a9b7c;
+    display: none;
+
+}
+
+li.dropdown-item{
+    height: 50px;
+}
+
+.message:hover + button{
+    display: inline;
+}
+
 .my-message{
     background-color: #d5f9ba;
     align-self: flex-end;
