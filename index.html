@@ -52,7 +52,7 @@
                     </div>
                     <div class="contacts-list-section">
                         <ul class="contact-list">
-                            <li v-for="(element, index) in contacts" @click="chooseUser(index)" class="d-flex justify-content-between">
+                            <li v-for="(element, index) in filteredContacts" @click="chooseUser(index)" class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <img class="big-avatar" :src="element.avatar" alt="">
                                     <div class="d-flex flex-column ps-2">

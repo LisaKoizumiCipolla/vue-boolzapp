@@ -197,7 +197,7 @@ createApp({
         },
 
         filterContacts(){
-            this.filter === this.searchContact;
+            this.filter = this.searchContact;
         }
     },
 
